@@ -1,0 +1,124 @@
+<!-- 
+<div class="container">
+  <div class="jumbotron">
+      <div mbsc-form>
+        <div class="mbsc-grid mbsc-form-grid">
+            <div class="mbsc-row">
+               
+                <div class="mbsc-col-sm-12 mbsc-col-md-6">
+                    <label>
+                        Select Country
+                        <select mbsc-dropdown id="demo-desktop" data-input-style="box"  (change)="onChange($event.target.value)">
+                            <option  *ngFor="let i of countries">{{i.Country}}</option>
+                           
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <form>
+          <mat-form-field>
+      &nbsp;&nbsp;&nbsp;&nbsp;<mat-label>Select Country </mat-label>
+      <mat-select [(ngModel)]="selectedValue" name="i" (ngModelChange)='onChange($event)' >
+        <mat-option *ngFor="let i of countries" [value]="i.Country">
+          {{i.Country}}
+        </mat-option>
+      </mat-select>
+      
+    </mat-form-field>
+    
+    <!-- <div data-input-style="red">{{msg}}</div>
+    <div *ngIf="!msg" >
+      
+      
+           <h3 class="h1">Last update :{{date| date : 'dd.MM.y' }}</h3>-->
+
+    <table class="table" >
+      <thead>
+        <tr>
+          
+          <th >Confirmed Cases</th>
+          <th >Today Cases</th>
+          <th >Deaths</th>
+          <th >Today Deaths</th>
+          <th >Recovered Cases</th>
+          <th >Active Cases</th>
+          <th >Critical</th>
+         
+         
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        
+          <th>{{cases}} </th>
+          <th>{{todayCases}}</th>
+          <th>{{deaths}}</th>
+          <th>{{todayDeaths}}</th>
+          <th>{{recovered}}</th>
+          <th>{{active}}</th>
+          <th>{{critical}}</th>
+
+        </tr>
+              </tbody>
+    </table>
+    
+      
+    
+   
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+   Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition"
+
+   Position Column   <ng-container matColumnDef="cases">
+    <th mat-header-cell *matHeaderCellDef>Total cases</th>
+    <td mat-cell *matCellDef="let element"> {{element.cases}} </td>
+  </ng-container>
+
+  <!-- Name Column -
+  <ng-container matColumnDef="todayCases">
+    <th mat-header-cell *matHeaderCellDef> Today Cases </th>
+    <td mat-cell *matCellDef="let element"> {{element.todayCases}} </td>
+  </ng-container>
+
+  <!-- Weight Column 
+  <ng-container matColumnDef="deaths">
+    <th mat-header-cell *matHeaderCellDef> Total deaths </th>
+    <td mat-cell *matCellDef="let element"> {{element.deaths}} </td>
+  </ng-container>
+
+  <!-- Symbol Column 
+  <ng-container matColumnDef="todayDeaths">
+    <th mat-header-cell *matHeaderCellDef> Today Deaths </th>
+    <td mat-cell *matCellDef="let element"> {{element.todayDeaths
+    }} </td>
+  </ng-container>
+  <ng-container matColumnDef="recovered">
+    <th mat-header-cell *matHeaderCellDef> recovered </th>
+    <td mat-cell *matCellDef="let element"> {{element.recovered}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="active">
+    <th mat-header-cell *matHeaderCellDef> active </th>
+    <td mat-cell *matCellDef="let element"> {{element.active}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="critical">
+    <th mat-header-cell *matHeaderCellDef>critical </th>
+    <td mat-cell *matCellDef="let element"> {{element.critical}} </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> -->
+
+    
+  
+</form>
+
+
+

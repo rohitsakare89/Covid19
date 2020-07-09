@@ -1,0 +1,11 @@
+.example-panel-green.mat-select-panel {
+    background: rgba(0, 255, 0, 0.5);
+  }
+  
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
